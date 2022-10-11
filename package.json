@@ -1,0 +1,33 @@
+{
+  "name": "vue-micro-app",
+  "version": "1.0.0",
+  "description": "A micro app",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --registry https://registry.npmmirror.com/",
+    "dev": "nx run-many --target=dev --all",
+    "build": "nx run-many --target=build --all"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kerwin-ly/vue-micro-app.git"
+  },
+  "keywords": [
+    "vue2",
+    "vue3",
+    "qiankun"
+  ],
+  "author": "Kerwin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kerwin-ly/vue-micro-app/issues"
+  },
+  "homepage": "https://github.com/kerwin-ly/vue-micro-app#readme",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.6.2"
+  }
+}
