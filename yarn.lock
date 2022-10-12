@@ -3752,6 +3752,7 @@
   "version" "5.7.4"
 
 "acorn@^6.0.0 || ^7.0.0 || ^8.0.0":
+  "integrity" "sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A=="
   "version" "7.4.1"
 
 "acorn@^6.0.2", "acorn@^6.0.7", "acorn@^6.1.1", "acorn@^6.4.1":
@@ -7131,6 +7132,7 @@
     "text-table" "^0.2.0"
 
 "eslint@>=5.0.0":
+  "integrity" "sha512-S3Rz11i7c8AA5JPv7xAH+dOyq/Cu/VXHiHXBPOU1k/JAM5dXqQPt3qcrhpHSorXmrpu2g0gkIBVXAqCpzfoZIg=="
   "version" "5.16.0"
   dependencies:
     "@babel/code-frame" "^7.0.0"
@@ -15640,6 +15642,7 @@
     "is-plain-object" "3.0.1"
 
 "vue@*":
+  "integrity" "sha512-HmFC70qarSHPXcKtW8U8fgIkF6JGvjEmDiVInTkKZP0gIlEPhlVlcJJLkdGIDiNkIeA2zJPQTWJUI4iWe+AVfg=="
   "version" "2.7.10"
   dependencies:
     "@vue/compiler-sfc" "2.7.10"
@@ -15933,6 +15936,7 @@
   "version" "0.4.5"
 
 "webpack@^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0":
+  "integrity" "sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q=="
   "version" "4.46.0"
   dependencies:
     "@webassemblyjs/ast" "1.9.0"
@@ -16019,6 +16023,7 @@
     "webpack-sources" "^1.4.1"
 
 "webpack@>=2":
+  "integrity" "sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q=="
   "version" "4.46.0"
   dependencies:
     "@webassemblyjs/ast" "1.9.0"
