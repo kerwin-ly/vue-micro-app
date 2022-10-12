@@ -3752,8 +3752,8 @@
   "version" "5.7.4"
 
 "acorn@^6.0.0 || ^7.0.0 || ^8.0.0":
-  "integrity" "sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A=="
-  "version" "7.4.1"
+  "integrity" "sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ=="
+  "version" "6.4.2"
 
 "acorn@^6.0.2", "acorn@^6.0.7", "acorn@^6.1.1", "acorn@^6.4.1":
   "integrity" "sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ=="
@@ -10523,6 +10523,20 @@
   "resolved" "https://registry.npmmirror.com/methods/-/methods-1.1.2.tgz"
   "version" "1.1.2"
 
+"micro@file:/Users/kerwin/Desktop/git-project/vue-micro-app/packages/micro":
+  "resolved" "file:packages/micro"
+  "version" "0.1.0"
+  dependencies:
+    "ant-design-vue" "^3.2.7"
+    "axios" "^0.27.2"
+    "core-js" "^3.8.3"
+    "lodash-es" "^4.17.21"
+    "pinia" "^2.0.14"
+    "register-service-worker" "^1.7.2"
+    "vue" "^3.2.13"
+    "vue-i18n" "^9.1.10"
+    "vue-router" "^4.0.3"
+
 "micromatch@^3.1.10", "micromatch@^3.1.4":
   "integrity" "sha512-MWikgl9n9M3w+bpsY3He8L+w9eF9338xRl8IAO5viDizwSzziFEyUzo2xrrloB64ADbTf8uA8vRqqttDTOmccg=="
   "resolved" "https://registry.npmmirror.com/micromatch/-/micromatch-3.1.10.tgz"
@@ -12720,20 +12734,15 @@
   dependencies:
     "fast-diff" "^1.1.2"
 
-"prettier@^1.18.2 || ^2.0.0":
+"prettier@^1.18.2 || ^2.0.0", "prettier@^2.4.1", "prettier@>=1.13.0", "prettier@>=2.0.0":
   "integrity" "sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g=="
   "resolved" "https://registry.npmmirror.com/prettier/-/prettier-2.7.1.tgz"
   "version" "2.7.1"
 
-"prettier@^1.18.2", "prettier@>= 1.13.0", "prettier@>=1.13.0":
+"prettier@^1.18.2", "prettier@>= 1.13.0":
   "integrity" "sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew=="
   "resolved" "https://registry.npmmirror.com/prettier/-/prettier-1.19.1.tgz"
   "version" "1.19.1"
-
-"prettier@^2.4.1", "prettier@>=2.0.0":
-  "integrity" "sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g=="
-  "resolved" "https://registry.npmmirror.com/prettier/-/prettier-2.7.1.tgz"
-  "version" "2.7.1"
 
 "pretty-bytes@^4.0.2":
   "integrity" "sha512-yJAF+AjbHKlxQ8eezMd/34Mnj/YTQ3i6kLzvVsH4l/BfIFtp444n0wVbnsn66JimZ9uBofv815aRp1zCppxlWw=="
@@ -15666,20 +15675,6 @@
   dependencies:
     "@vue/compiler-sfc" "2.7.10"
     "csstype" "^3.1.0"
-
-"vue3-pro@file:/Users/kerwin/Desktop/git-project/vue-micro-app/packages/micro":
-  "resolved" "file:packages/micro"
-  "version" "0.1.0"
-  dependencies:
-    "ant-design-vue" "^3.2.7"
-    "axios" "^0.27.2"
-    "core-js" "^3.8.3"
-    "lodash-es" "^4.17.21"
-    "pinia" "^2.0.14"
-    "register-service-worker" "^1.7.2"
-    "vue" "^3.2.13"
-    "vue-i18n" "^9.1.10"
-    "vue-router" "^4.0.3"
 
 "vuex@^3.0.1":
   "integrity" "sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw=="
