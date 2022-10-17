@@ -4,10 +4,13 @@
   "description": "A micro app",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "lerna bootstrap --registry https://registry.npmmirror.com/",
-    "dev": "nx run-many --target=dev --all",
-    "build": "nx run-many --target=build --all",
-    "lint": "nx run-many --target=lint --all",
+    "dev": "pnpm -r --parallel --filter=./packages/* run dev",
+    "dev:main": "pnpm --filter=./packages/main run dev",
+    "dev:micro": "pnpm --filter=./packages/micro run dev",
+    "build": "pnpm -r --parallel --filter=./packages/* run build",
+    "lint": "pnpm lint:ts",
+    "lint:ts": "eslint --fix ./packages --ext .vue,.js,.ts,.tsx",
+    "lint:style": "stylelint 'packages/**/*.less' --syntax less",
     "prepare": "husky install"
   },
   "private": true,
@@ -26,15 +29,25 @@
     "url": "https://github.com/kerwin-ly/vue-micro-app/issues"
   },
   "homepage": "https://github.com/kerwin-ly/vue-micro-app#readme",
-  "workspaces": [
-    "packages/*"
-  ],
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1",
     "husky": "^8.0.1",
-    "lerna": "^5.6.2",
+    "pnpm": "^7.8.0",
     "lint-staged": "^13.0.2",
-    "prettier": "^2.4.1"
-  }
+    "vue-eslint-parser": "^9.0.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "packageManager": "pnpm@7.8.0"
 }

@@ -75,7 +75,7 @@ export function useEventBus<T = unknown, P = SafeAny>(key: EventBusIdentifier<T>
   }
 
   function emit(event?: T, payload?: P) {
-    events.get(key)?.forEach(v => v(event, payload));
+    events.get(key)?.forEach((v) => v(event, payload));
   }
 
   return { on, once, off, emit, reset };
