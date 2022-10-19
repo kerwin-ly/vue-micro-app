@@ -20,5 +20,10 @@ module.exports = defineConfig({
     config.experiments = {
       topLevelAwait: true
     };
+  },
+  devServer: {
+    host: 'localhost',
+    proxy: null,
+    port: '8082'
   }
 });

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 import { union } from 'lodash-es';
 import Login from '@/views/system/pages/Login.vue';
 import { dashboardRoutes } from './routes/dashboard';
@@ -11,7 +11,7 @@ const { t } = useI18n();
 const routes: RouteRecordRaw[] = union([
   {
     path: '/',
-    component: () => import('@/layouts/index.vue'),
+    component: () => import('@/layouts/Index.vue'),
     children: union(dashboardRoutes, userRoutes),
     meta: {
       title: t('routes.dashboard.home')
@@ -29,7 +29,7 @@ const routes: RouteRecordRaw[] = union([
 ]);
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(process.env.BASE_URL),
   routes,
   strict: true, // '/' slash is not allowed at the end of URL.
   scrollBehavior: () => ({ left: 0, top: 0 })
