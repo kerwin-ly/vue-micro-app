@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import { union } from 'lodash-es';
 import Login from '@/views/system/pages/Login.vue';
 import { dashboardRoutes } from './routes/dashboard';
@@ -29,7 +29,7 @@ const routes: RouteRecordRaw[] = union([
 ]);
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   strict: true, // '/' slash is not allowed at the end of URL.
   scrollBehavior: () => ({ left: 0, top: 0 })

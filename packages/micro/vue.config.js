@@ -1,4 +1,6 @@
 const { defineConfig } = require('@vue/cli-service');
+const { name } = require('../package.json');
+
 module.exports = defineConfig({
   publicPath: process.env.BASE_URL,
   transpileDependencies: true,
@@ -15,15 +17,21 @@ module.exports = defineConfig({
       }
     }
   },
-  configureWebpack: (config) => {
-    // enable top-level `await` syntax
-    config.experiments = {
+  chainWebpack: (config) => config.resolve.symlinks(false),
+  configureWebpack: {
+    experiments: {
       topLevelAwait: true
-    };
+    },
+    output: {
+      // 把子应用打包成 umd 库格式
+      library: `${name}-[name]`,
+      libraryTarget: 'umd',
+      jsonpFunction: `webpackJsonp_${name}`
+    }
   },
   devServer: {
     host: 'localhost',
     proxy: null,
-    port: '8082'
+    port: 8082
   }
 });
