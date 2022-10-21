@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
-const { name } = require('../package.json');
+const { name } = require('../../package.json');
 
 module.exports = defineConfig({
   publicPath: process.env.BASE_URL,
@@ -13,7 +13,7 @@ module.exports = defineConfig({
         },
         additionalData: `
           @import "~@/styles/variables.less";
-      `
+        `
       }
     }
   },
@@ -25,8 +25,8 @@ module.exports = defineConfig({
     output: {
       // 把子应用打包成 umd 库格式
       library: `${name}-[name]`,
-      libraryTarget: 'umd',
-      jsonpFunction: `webpackJsonp_${name}`
+      libraryTarget: 'umd'
+      // jsonpFunction: `webpackJsonp_${name}`
     }
   },
   devServer: {
