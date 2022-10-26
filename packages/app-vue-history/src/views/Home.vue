@@ -2,7 +2,6 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <button @click="toMicro()">Go micro app</button>
   </div>
 </template>
 
@@ -11,16 +10,9 @@
 import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     HelloWorld
-  },
-  methods: {
-    toMicro() {
-      this.$router.push({
-        path: '/micro'
-      });
-    }
   }
 };
 </script>

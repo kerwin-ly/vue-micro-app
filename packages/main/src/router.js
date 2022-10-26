@@ -5,6 +5,7 @@ import Home from './views/Home.vue';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -22,7 +23,19 @@ export default new Router({
     {
       path: '/main',
       name: 'main',
-      component: () => import(/* webpackChunkName: "main" */ './views/Main.vue')
+      component: () => import(/* webpackChunkName: "main" */ './views/Main.vue'),
+      children: [
+        {
+          path: '/main/child',
+          name: 'child',
+          component: () => import(/* webpackChunkName: "child" */ './views/Child.vue')
+        }
+      ]
+    },
+    {
+      path: '/micro/*',
+      name: 'micro',
+      component: () => import(/* webpackChunkName: "micro" */ './views/MicroContainer.vue')
     }
   ]
 });
