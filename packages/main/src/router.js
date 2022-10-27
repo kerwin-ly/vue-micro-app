@@ -31,11 +31,11 @@ export default new Router({
           component: () => import(/* webpackChunkName: "child" */ './views/Child.vue')
         }
       ]
-    },
-    {
-      path: '/micro/*',
-      name: 'micro',
-      component: () => import(/* webpackChunkName: "micro" */ './views/MicroContainer.vue')
     }
+    // {
+    //   path: '/micro/*',
+    //   name: 'micro',
+    //   component: () => import(/* webpackChunkName: "micro" */ './views/MicroContainer.vue')
+    // }
   ]
 });

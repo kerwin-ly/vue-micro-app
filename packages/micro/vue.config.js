@@ -1,10 +1,10 @@
 const { defineConfig } = require('@vue/cli-service');
-const { name: APP_NAME } = require('./package.json');
+const { name } = require('../main/package.json');
 const path = require('path');
 
 module.exports = defineConfig({
   // publicPath: process.env.BASE_URL,
-  publicPath: '/micro',
+  publicPath: process.env.NODE_ENV === 'production' ? '/micro' : '/',
   // transpileDependencies: true,
   css: {
     loaderOptions: {
@@ -31,9 +31,9 @@ module.exports = defineConfig({
     },
     output: {
       // 把子应用打包成 umd 库格式
-      library: APP_NAME,
+      library: name,
       libraryTarget: 'umd',
-      chunkLoadingGlobal: `webpackJsonp_${APP_NAME}`
+      chunkLoadingGlobal: `webpackJsonp_${name}`
     }
   },
   devServer: {

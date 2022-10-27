@@ -58,6 +58,17 @@ registerMicroApps([
     container: '#appContainer',
     activeRule: '/app-vue-history',
     props: { data: store }
+  },
+  {
+    name: 'micro-app',
+    // entry: process.env.MICRO_APP,
+    entry: 'http://localhost:8082', // 生产环境后面加'/'
+    activeRule: '/micro',
+    container: '#subapp-viewport' // 子应用挂载的div
+    // props: {
+    //   routerBase: '/micro', // 下发基础路由
+    //   getGlobalState: store.getGlobalState // 下发getGlobalState方法
+    // }
   }
 ]);
 
