@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import './registerServiceWorker';
-import { registerMicroApps, start } from 'qiankun';
+// import { registerMicroApps, start } from 'qiankun';
 // import microApps from './micro-app';
 
 Vue.config.productionTip = false;
@@ -51,25 +51,18 @@ new Vue({
 // );
 // setDefaultMountApp('/micro');
 // start();
-registerMicroApps([
-  {
-    name: 'app-vue-history',
-    entry: 'http://localhost:2222',
-    container: '#appContainer',
-    activeRule: '/app-vue-history',
-    props: { data: store }
-  },
-  {
-    name: 'micro-app',
-    // entry: process.env.MICRO_APP,
-    entry: 'http://localhost:8082', // 生产环境后面加'/'
-    activeRule: '/micro',
-    container: '#subapp-viewport' // 子应用挂载的div
-    // props: {
-    //   routerBase: '/micro', // 下发基础路由
-    //   getGlobalState: store.getGlobalState // 下发getGlobalState方法
-    // }
-  }
-]);
+// registerMicroApps([
+//   {
+//     name: 'micro-app',
+//     // entry: process.env.MICRO_APP,
+//     entry: 'http://localhost:8082', // 生产环境后面加'/'
+//     activeRule: '/micro',
+//     container: '#subapp-viewport' // 子应用挂载的div
+//     // props: {
+//     //   routerBase: '/micro', // 下发基础路由
+//     //   getGlobalState: store.getGlobalState // 下发getGlobalState方法
+//     // }
+//   }
+// ]);
 
-start();
+// start();

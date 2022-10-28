@@ -4,8 +4,6 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <div id="appContainer"></div>
-    <div id="subapp-viewport"></div>
     <router-view></router-view>
   </div>
 </template>

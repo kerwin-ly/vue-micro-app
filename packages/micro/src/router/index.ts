@@ -18,7 +18,7 @@ const routes: RouteRecordRaw[] = union([
     }
   },
   {
-    path: '/login',
+    path: '/login/test',
     name: 'login',
     component: Login
   },
