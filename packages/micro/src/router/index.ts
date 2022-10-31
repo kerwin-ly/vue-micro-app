@@ -30,7 +30,7 @@ const routes: RouteRecordRaw[] = union([
 
 console.log('baseurl', process.env.BASE_URL);
 const router = createRouter({
-  history: createWebHistory('/micro'),
+  history: createWebHistory('/main/subapp'),
   routes,
   strict: true, // '/' slash is not allowed at the end of URL.
   scrollBehavior: () => ({ left: 0, top: 0 })

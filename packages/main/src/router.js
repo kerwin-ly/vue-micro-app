@@ -20,22 +20,21 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
+    // {
+    //   path: '/main',
+    //   name: 'main',
+    //   component: () => import(/* webpackChunkName: "main" */ './views/Main.vue'),
+    //   children: [
+    //     {
+    //       path: '/main/child',
+    //       name: 'child',
+    //       component: () => import(/* webpackChunkName: "child" */ './views/Child.vue')
+    //     }
+    //   ]
+    // },
     {
-      path: '/micro',
-      name: 'micro',
-      component: () => import(/* webpackChunkName: "main" */ './views/Main.vue'),
-      children: [
-        {
-          path: '/micro/child',
-          name: 'child',
-          component: () => import(/* webpackChunkName: "child" */ './views/Child.vue')
-        }
-      ]
-    },
-    {
-      path: '/micro/*',
-      name: 'micro'
-      // component: () => import('./views/MicroContainer.vue')
+      path: '/main/*',
+      component: () => import('./views/Main.vue')
     }
   ]
 });
