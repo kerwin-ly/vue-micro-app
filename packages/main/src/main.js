@@ -1,68 +1,52 @@
 import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
+
+import 'normalize.css/normalize.css'; // A modern alternative to CSS resets
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import locale from 'element-ui/lib/locale/lang/en'; // lang i18n
+
+import '@/styles/index.scss'; // global css
+
+import App from './App';
 import store from './store';
-import './registerServiceWorker';
+import router from './router';
+
+import '@/icons'; // icon
+import '@/permission'; // permission control
 import { registerMicroApps } from 'qiankun';
-// import microApps from './micro-app';
+/**
+ * If you don't want to use mock-server
+ * you want to use MockJs for mock api
+ * you can execute: mockXHR()
+ *
+ * Currently MockJs will be used in the production environment,
+ * please remove it before going online ! ! !
+ */
+if (process.env.NODE_ENV === 'production') {
+  const { mockXHR } = require('../mock');
+  mockXHR();
+}
+
+// set ElementUI lang to EN
+Vue.use(ElementUI, { locale });
+// 如果想要中文版 element-ui，按如下方式声明
+// Vue.use(ElementUI)
 
 Vue.config.productionTip = false;
 
 new Vue({
+  el: '#app',
   router,
   store,
-  render: h => h(App)
-}).$mount('#app');
-// console.log(process.env.MICRO_APP);
-// registerMicroApps(
-//   [
-//     {
-//       name: 'micro-app',
-//       // entry: process.env.MICRO_APP,
-//       entry: '//localhost:8082/micro', // 生产环境后面加'/'
-//       activeRule: '/micro',
-//       container: '#subapp-viewport', // 子应用挂载的div
-//       props: {
-//         routerBase: '/micro', // 下发基础路由
-//         getGlobalState: store.getGlobalState // 下发getGlobalState方法
-//       }
-//     }
-//   ],
-//   {
-//     beforeLoad: app => {
-//       console.log('before load app.name====>>>>>', app.name);
-//     },
-//     beforeMount: [
-//       app => {
-//         console.log('[LifeCycle] before mount %c%s', 'color: green;', app.name);
-//       }
-//     ],
-//     afterMount: [
-//       app => {
-//         console.log('[LifeCycle] after mount %c%s', 'color: green;', app.name);
-//       }
-//     ],
-//     afterUnmount: [
-//       app => {
-//         console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name);
-//       }
-//     ]
-//   }
-// );
-// setDefaultMountApp('/micro');
-// start();
+  render: (h) => h(App)
+});
+
 registerMicroApps([
   {
-    name: 'micro-app',
-    // entry: process.env.MICRO_APP,
-    entry: 'http://localhost:8082', // 生产环境后面加'/'
-    activeRule: '/main/subapp',
-    container: '#vue-admin-child' // 子应用挂载的div
-    // props: {
-    //   routerBase: '/micro', // 下发基础路由
-    //   getGlobalState: store.getGlobalState // 下发getGlobalState方法
-    // }
+    name: 'app-vue-admin',
+    entry: 'http://localhost:8083',
+    container: '#appContainer',
+    activeRule: '/layout/micro'
   }
 ]);
-
-// start();

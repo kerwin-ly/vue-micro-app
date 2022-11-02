@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service');
-const { name } = require('../main/package.json');
+const { name } = require('./package.json');
 const path = require('path');
 
 module.exports = defineConfig({
@@ -39,7 +39,7 @@ module.exports = defineConfig({
   devServer: {
     host: 'localhost',
     proxy: null,
-    port: 8082,
+    port: 8083,
     headers: {
       'Access-Control-Allow-Origin': '*' // 主应用获取子应用时跨域响应头
     }

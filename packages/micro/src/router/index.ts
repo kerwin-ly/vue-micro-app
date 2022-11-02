@@ -28,11 +28,10 @@ const routes: RouteRecordRaw[] = union([
   }
 ]);
 
-console.log('baseurl', process.env.BASE_URL);
 const router = createRouter({
-  history: createWebHistory('/main/subapp'),
+  history: createWebHistory((window as any).__POWERED_BY_QIANKUN__ ? '/layout/micro' : '/'),
   routes,
-  strict: true, // '/' slash is not allowed at the end of URL.
+  // strict: true, // '/' slash is not allowed at the end of URL.
   scrollBehavior: () => ({ left: 0, top: 0 })
 });
 

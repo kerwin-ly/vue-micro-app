@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <Layout.Sider :trigger="null" collapsible :collapsed="collapsed">
+    <Layout.Sider v-if="!isQiankun" :trigger="null" collapsible :collapsed="collapsed">
       <LayoutMenu :menus="menus"></LayoutMenu>
     </Layout.Sider>
     <Layout>
-      <layout-header v-model:collapsed="collapsed"></layout-header>
+      <layout-header v-if="!isQiankun" v-model:collapsed="collapsed"></layout-header>
       <Layout.Content>
         <router-view v-slot="{ Component }">
           <transition name="move" mode="out-in">
@@ -37,6 +37,7 @@ const menus = reactive([
     children: [{ key: 'user-list', name: t('routes.user.userList') }]
   }
 ]);
+const isQiankun = reactive((window as any).__POWERED_BY_QIANKUN__);
 </script>
 <style lang="less">
 #components-layout-demo-custom-trigger .trigger {

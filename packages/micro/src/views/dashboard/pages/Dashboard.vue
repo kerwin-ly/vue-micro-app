@@ -1,6 +1,6 @@
 <template>
   <PageContainer>
-    <p>this is dashboard</p>
+    <h3>This is dashboard page in micro app</h3>
   </PageContainer>
 </template>
 

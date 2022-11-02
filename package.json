@@ -9,7 +9,7 @@
     "dev": "nx run-many --target=dev --all",
     "build": "nx run-many --target=build --all",
     "lint": "yarn lint:ts",
-    "lint:ts": "eslint --fix ./packages --ext .vue,.js,.ts,.tsx",
+    "lint:ts": "eslint --fix ./packages/micro --ext .vue,.js,.ts,.tsx",
     "lint:style": "stylelint 'packages/**/*.less' --syntax less",
     "prepare": "husky install"
   },
