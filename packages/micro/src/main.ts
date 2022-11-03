@@ -8,7 +8,7 @@ import { setupStore } from './store';
 import { setupAntd, setupAssets } from './plugins';
 import { setupI18n } from './locales';
 
-let app: any = null;
+let app: SafeAny = null;
 
 async function setupPlugins(app: SafeAny) {
   // configure store with pinia
@@ -26,8 +26,8 @@ async function setupPlugins(app: SafeAny) {
   await setupI18n(app);
 }
 
-async function setupApp(container?: any) {
-  app.mount(container ? container.querySelector('#microApp') : '#microApp');
+async function setupApp(container?: SafeAny) {
+  app.mount(container ? container.querySelector('#mainApp') : '#mainApp');
 }
 
 async function render(props: SafeAny) {
@@ -42,7 +42,7 @@ async function render(props: SafeAny) {
 //   render({});
 // }
 
-if (!(window as any).__POWERED_BY_QIANKUN__) {
+if (!(window as SafeAny).__POWERED_BY_QIANKUN__) {
   console.log('trigger not qiankun');
   render({});
 }
@@ -54,7 +54,7 @@ export async function bootstrap() {
 /**
  * mount ： 在应用每次进入时调用
  */
-export async function mount(props: any) {
+export async function mount(props: SafeAny) {
   console.log('mount', props);
   render(props);
 }
