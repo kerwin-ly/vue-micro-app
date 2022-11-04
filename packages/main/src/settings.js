@@ -1,5 +1,4 @@
 module.exports = {
-
   title: 'Vue Admin Template',
 
   /**
@@ -13,4 +12,4 @@ module.exports = {
    * @description Whether show the logo in sidebar
    */
   sidebarLogo: false
-}
+};

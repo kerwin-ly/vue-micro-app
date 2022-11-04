@@ -42,6 +42,7 @@ new Vue({
   render: (h) => h(App)
 });
 
+console.log('process.env', process.env);
 registerMicroApps([
   {
     name: 'app-vue-admin',

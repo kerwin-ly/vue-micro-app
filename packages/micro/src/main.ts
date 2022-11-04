@@ -51,17 +51,13 @@ export async function bootstrap() {
   console.log('bootstrap');
 }
 
-/**
- * mount ： 在应用每次进入时调用
- */
+// Would be triggered when app starts
 export async function mount(props: SafeAny) {
   console.log('mount', props);
   render(props);
 }
 
-/**
- * unmount ：应用每次 切出/卸载 均会调用
- */
+// Would be triggered when app uninstalled
 export async function unmount() {
   console.log('unmount');
   app.unmount();

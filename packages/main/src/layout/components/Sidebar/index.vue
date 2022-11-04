@@ -24,12 +24,12 @@ export default {
       'sidebar'
     ]),
     routes() {
-      const routes = this.$router.options.routes
-      console.log(routes)
+      const routes = this.$router.options.routes;
+
       return routes.concat([
         {
-          path: '/layout/vue-admin-child/dashboard',
-          meta: { title: '子应用的 dashboard', icon: 'dashboard' }
+          path: `/layout/micro/dashboard`,
+          meta: { title: 'Sub app dashboard', icon: 'dashboard' }
         }
       ])
     },

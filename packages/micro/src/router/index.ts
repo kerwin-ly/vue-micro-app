@@ -29,7 +29,7 @@ const routes: RouteRecordRaw[] = union([
 ]);
 
 const router = createRouter({
-  history: createWebHistory((window as any).__POWERED_BY_QIANKUN__ ? '/layout/micro' : '/'),
+  history: createWebHistory((window as SafeAny).__POWERED_BY_QIANKUN__ ? '/layout/micro' : '/'),
   routes,
   // strict: true, // '/' slash is not allowed at the end of URL.
   scrollBehavior: () => ({ left: 0, top: 0 })

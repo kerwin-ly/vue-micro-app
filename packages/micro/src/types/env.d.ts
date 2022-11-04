@@ -10,6 +10,7 @@ declare namespace NodeJS {
       NODE_ENV: 'development' | 'production';
       PORT?: string;
       PWD: string;
+      MICRO_APP_SUFFIX?: string;
     };
   }
 }
