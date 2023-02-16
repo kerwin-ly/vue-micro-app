@@ -5,7 +5,7 @@
       <el-menu :default-active="activeMenu" :collapse="isCollapse" :background-color="variables.menuBg"
         :text-color="variables.menuText" :unique-opened="false" :active-text-color="variables.menuActiveText"
         :collapse-transition="false" mode="vertical">
-        <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
+        <sidebar-item v-for="route in $router.options.routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>
   </div>
@@ -23,16 +23,6 @@ export default {
     ...mapGetters([
       'sidebar'
     ]),
-    routes() {
-      const routes = this.$router.options.routes;
-
-      return routes.concat([
-        {
-          path: `/layout/micro/dashboard`,
-          meta: { title: 'Sub app dashboard', icon: 'dashboard' }
-        }
-      ])
-    },
     activeMenu() {
       const route = this.$route
       const { meta, path } = route
